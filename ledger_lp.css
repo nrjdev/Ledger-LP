@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+  --color-primary: #000000;
+  --color-secondary: #f5f5f5;
+  --color-tertiary: #d4a0ff;
+  --color-button: #ff5300;
+  --color-other: #c1c1c1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: 'DM Mono', monospace;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.4;
+  background-color: var(--color-secondary);
+  color: #000000;
+}
+
+a {
+  color: #000000;
+}
+
+ul {
+  list-style: none;
+  display: block;
+}
+
+ul.show {
+  display: block;
+}
+
+p {
+  margin: 5px 0;
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* NAVBAR */
+
+.navbar {
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  background-color: #f5f5f5;
+  padding: 35px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+}
+
+#nav-list {
+  color: var(--color-primary);
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+}
+
+.navbar li {
+  margin: 0 37px;
+  font-weight: 600;
+  font-size: 1em;
+}
+.navbar a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: var(--color-button);
+}
+
+.navbar-logo, img {
+  background: none;
+}
+
+
+.navbar-logo img {
+  width: 100px;
+  height: 35px;
+}
+
+.navbar-nav-right img {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+
+/* HERO */
+
+.hero-container {
+  width: 100%;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  background-color: var(--color-secondary);
+  padding-bottom: 70px;
+}
+
+.hero-img {
+  margin: 6% 4%;
+  padding: 40px 40px 0 40px;
+  width: 82%;
+  height: auto;
+  align-items: center;
+}
+
+.text-xl {
+  width: 100%;
+  padding: 15px 50px;
+  margin: 0 5%;
+  margin-top: 8%;
+  font-size: 4.5em;
+  font-weight: 500;
+  line-height: 85px;
+  text-align: left;
+  font-family: 'DM Mono', monospace;
+}
+
+.text-md {
+  padding: 15px 50px;
+  margin: 0 5%;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+}
+
+.hero-btn {
+  padding-top: 20px;
+  margin: 2% 14%;
+  vertical-align: baseline;
+  transition: all 0s;
+  width: 210px;
+  background-color: #ff5300;
+  color: #fff;
+  appearance: none;
+  border: none;
+  border-radius: 100px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: inherit;
+  max-height: 76px;
+  min-width: 178px;
+  outline: none;
+  padding: 24px 32px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.hamburger {
+  border: 0;
+  display: none;
+}
+
+.btn-flex {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.learn-more {
+  width: 100%;
+  padding-top: 5%;
+}
+.arrow {
+  color: black;
+}
+
+.mobile-logo {
+  display: none;
+}
+
+
+/* MEDIA QUERIES */
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: auto;
+  background-color: #f5f5f5;
+  padding: 35px;
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+}
+
+ @media only screen and (max-width: 1200px) { 
+  .hero {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-secondary);
+    padding-bottom: 50px;
+  }
+ 
+  .hero-img {
+    margin: 80px 10px 0 186px;
+    padding: 0 10px;
+    width: 70%;
+    align-content: center;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .hamburger {
+    display: block;
+    border: 0;
+    background-color: transparent;
+    color: black;
+    font-size: 30px;
+    margin: 20px;
+    align-self: flex-end;
+}
+
+.mobile-logo img {
+  width: 100px;
+  height: 35px;
+  background: none;
+}
+
+.text-xl {
+  width: 100%;
+  padding: 15px 50px;
+  margin: 0;
+  margin-top: 8%;
+  font-size: 4em;
+  font-weight: 500;
+  line-height: 85px;
+  text-align: left;
+  font-family: 'DM Mono', monospace;
+}
+.text-md {
+  padding: 15px 50px;
+  margin: 0;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+}
+
+ul {
+  display: none;
+  margin: 0px;
+}
+
+ul.show {
+  display: block;
+}
+nav {
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: black;
+  width: 100%;
+}
+.logo {
+  display: none;
+}
+
+.hero-img {
+  margin: 20px 80px;
+  padding: 0 10px;
+  width: 80%;
+  align-content: center;
+}
+}
+
+
+
+
+
+
+
+
+
+
+  
